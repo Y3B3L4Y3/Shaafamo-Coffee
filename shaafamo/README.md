@@ -1,36 +1,136 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Shaafamo Coffee
 
-## Getting Started
+Premium specialty coffee from the highlands of Sidama, Ethiopia. A modern, animated website showcasing our farm-to-cup journey.
 
-First, run the development server:
+## 🌿 About
+
+Shaafamo Coffee is a premium specialty coffee producer located in Sidama, Ethiopia. This website tells the story of our hand-picked, sun-dried coffee through a cinematic, immersive web experience.
+
+## 🛠️ Tech Stack
+
+- **Framework**: Next.js 16 (App Router)
+- **Styling**: Tailwind CSS v4
+- **Animations**: Framer Motion
+- **Language**: TypeScript
+- **Deployment**: Vercel
+
+## 🚀 Getting Started
+
+### Prerequisites
+
+- Node.js 18.17 or later
+- npm, yarn, or pnpm
+
+### Installation
 
 ```bash
+# Clone the repository
+git clone https://github.com/your-username/shaafamo-coffee.git
+
+# Navigate to the project
+cd shaafamo-coffee/shaafamo
+
+# Install dependencies
+npm install
+
+# Start development server
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000) to view the site.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 📦 Available Scripts
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+| Command | Description |
+|---------|-------------|
+| `npm run dev` | Start development server |
+| `npm run build` | Create production build |
+| `npm run start` | Start production server |
+| `npm run lint` | Run ESLint |
 
-## Learn More
+## 🎨 Brand Colors
 
-To learn more about Next.js, take a look at the following resources:
+| Color | Hex | Usage |
+|-------|-----|-------|
+| Coffee Bean | `#5D2E1F` | Secondary actions, text |
+| Leaf Olive | `#7B8B3D` | Primary buttons, accents |
+| Gold | `#B8956E` | Premium accents |
+| Cream | `#FDFBF7` | Backgrounds |
+| Espresso | `#1E1614` | Dark backgrounds |
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## 📁 Project Structure
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+```
+shaafamo/
+├── app/                 # Next.js App Router pages
+│   ├── about/          # About/Story page
+│   ├── contact/        # Contact page
+│   ├── gallery/        # Photo gallery
+│   ├── products/       # Products page
+│   ├── globals.css     # Global styles & CSS variables
+│   ├── layout.tsx      # Root layout
+│   └── page.tsx        # Home page
+├── components/          # Reusable React components
+│   ├── AnimatedButton.tsx
+│   ├── Footer.tsx
+│   ├── Hero.tsx
+│   ├── Logo.tsx
+│   ├── MasonryGrid.tsx
+│   ├── Navigation.tsx
+│   ├── ParallaxLayer.tsx
+│   └── ScrollReveal.tsx
+├── public/
+│   └── images/         # Static images & videos
+└── next.config.ts      # Next.js configuration
+```
 
-## Deploy on Vercel
+## 🌐 Deployment to Vercel
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+### Option 1: Deploy via Vercel Dashboard
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+1. Push your code to GitHub
+2. Go to [vercel.com](https://vercel.com)
+3. Click "New Project"
+4. Import your GitHub repository
+5. Set the **Root Directory** to `shaafamo`
+6. Click "Deploy"
+
+### Option 2: Deploy via CLI
+
+```bash
+# Install Vercel CLI
+npm i -g vercel
+
+# Navigate to the project
+cd shaafamo
+
+# Deploy
+vercel
+
+# For production deployment
+vercel --prod
+```
+
+### Environment Variables
+
+No environment variables are required for basic deployment.
+
+## 📱 Features
+
+- ✅ Responsive mobile-first design
+- ✅ Cinematic video hero with parallax effects
+- ✅ Smooth scroll animations
+- ✅ Image optimization with Next.js
+- ✅ Accessible button states (hover, focus, active)
+- ✅ SEO-friendly static generation
+- ✅ Security headers configured
+
+## 📞 Contact
+
+- **Phone**: +251 931 405 096 / +251 912 680 223
+- **Email**: teshalelankamo@gmail.com
+- **Location**: Sidama, Ethiopia
+
+## 📄 License
+
+© 2024 Shaafamo Coffee. All rights reserved.

@@ -107,7 +107,7 @@ export default function Home() {
             <ScrollReveal variant="slideRight" delay={0.2}>
               <div className="relative">
                 <div className="relative aspect-[4/5] rounded-2xl overflow-hidden shadow-2xl">
-                  <Image
+        <Image
                     src="/images/cherries-closeup.jpg"
                     alt="Close-up of red coffee cherries"
                     fill
@@ -157,7 +157,7 @@ export default function Home() {
               <StaggerItem key={index}>
                 <div className="group">
                   <div className="relative aspect-[4/3] rounded-xl overflow-hidden mb-6">
-                    <Image
+            <Image
                       src={step.image}
                       alt={step.title}
                       fill
@@ -246,7 +246,7 @@ export default function Home() {
               <AnimatedButton href="/contact" variant="primary" size="lg">
                 Get in Touch
               </AnimatedButton>
-              <AnimatedButton href="/products" variant="olive" size="lg">
+              <AnimatedButton href="/products" variant="primary" size="lg">
                 View Products
               </AnimatedButton>
             </div>
@@ -255,6 +255,6 @@ export default function Home() {
       </section>
 
       <Footer />
-    </main>
+      </main>
   );
 }

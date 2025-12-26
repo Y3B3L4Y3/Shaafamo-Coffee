@@ -19,6 +19,13 @@ const BRAND = {
   cream: "#FDFBF7",
 };
 
+const SIZES = {
+  sm: { icon: 40, text: "text-lg", subtext: "text-[8px]" },
+  md: { icon: 56, text: "text-2xl", subtext: "text-[10px]" },
+  lg: { icon: 72, text: "text-3xl", subtext: "text-xs" },
+  xl: { icon: 96, text: "text-4xl", subtext: "text-sm" },
+};
+
 export default function Logo({
   variant = "full",
   size = "md",
@@ -26,26 +33,14 @@ export default function Logo({
   className = "",
   animated = true,
 }: LogoProps) {
-  const sizes = {
-    sm: { icon: 40, text: "text-lg", subtext: "text-[8px]" },
-    md: { icon: 56, text: "text-2xl", subtext: "text-[10px]" },
-    lg: { icon: 72, text: "text-3xl", subtext: "text-xs" },
-    xl: { icon: 96, text: "text-4xl", subtext: "text-sm" },
-  };
-
+  const s = SIZES[size];
+  
   const colors = theme === "light"
     ? { text: BRAND.cream, subtext: BRAND.leafLight }
     : { text: BRAND.beanBrown, subtext: BRAND.leafOlive };
 
-  const s = sizes[size];
-
-  const Wrapper = animated ? motion.div : "div";
-  const wrapperProps = animated
-    ? { whileHover: { scale: 1.02 }, transition: { duration: 0.2 } }
-    : {};
-
-  // Logo image
-  const IconLogo = () => (
+  // Icon element
+  const iconElement = (
     <Image
       src="/images/logo.png"
       alt="Shaafamo Coffee"
@@ -56,8 +51,8 @@ export default function Logo({
     />
   );
 
-  // Text only
-  const TextLogo = () => (
+  // Text element
+  const textElement = (
     <div className="flex flex-col leading-none">
       <span
         className={`font-serif font-bold tracking-wide ${s.text}`}
@@ -74,21 +69,37 @@ export default function Logo({
     </div>
   );
 
-  // Full logo with image and text
-  const FullLogo = () => (
-    <div className="flex items-center gap-3">
-      <IconLogo />
-      <TextLogo />
-    </div>
-  );
+  // Render content based on variant
+  const content = (() => {
+    switch (variant) {
+      case "icon":
+        return iconElement;
+      case "text":
+        return textElement;
+      case "full":
+      default:
+        return (
+          <div className="flex items-center gap-3">
+            {iconElement}
+            {textElement}
+          </div>
+        );
+    }
+  })();
 
-  return (
-    <Wrapper className={`inline-flex ${className}`} {...wrapperProps}>
-      {variant === "icon" && <IconLogo />}
-      {variant === "text" && <TextLogo />}
-      {variant === "full" && <FullLogo />}
-    </Wrapper>
-  );
+  if (animated) {
+    return (
+      <motion.div
+        className={`inline-flex ${className}`}
+        whileHover={{ scale: 1.02 }}
+        transition={{ duration: 0.2 }}
+      >
+        {content}
+      </motion.div>
+    );
+  }
+
+  return <div className={`inline-flex ${className}`}>{content}</div>;
 }
 
 // Simple logo for navigation - just the image
