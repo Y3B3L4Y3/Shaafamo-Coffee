@@ -166,7 +166,7 @@ export default function GalleryPage() {
             <ScrollReveal>
               <div className="text-center mb-12">
                 <div className="section-divider mx-auto mb-4" />
-                <h2 className="font-serif text-3xl md:text-4xl font-bold text-espresso">
+                <h2 className="font-serif text-3xl md:text-4xl font-bold text-coffee-bean">
                   {category.title}
                 </h2>
                 <p className="text-text-muted mt-2">{category.description}</p>
@@ -202,10 +202,10 @@ export default function GalleryPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <ScrollReveal>
             <div className="text-center mb-12">
-              <span className="text-leaf-green font-medium tracking-widest uppercase text-sm">
+              <span className="text-leaf-olive font-medium tracking-widest uppercase text-sm">
                 Complete Collection
               </span>
-              <h2 className="font-serif text-3xl md:text-4xl font-bold text-espresso mt-2 mb-4">
+              <h2 className="font-serif text-3xl md:text-4xl font-bold text-coffee-bean mt-2 mb-4">
                 All Photos
               </h2>
               <p className="text-text-muted max-w-2xl mx-auto">
@@ -233,7 +233,7 @@ export default function GalleryPage() {
             </p>
             <a
               href="/contact"
-              className="inline-flex items-center justify-center px-8 py-4 bg-gold text-espresso font-medium rounded-full btn-gold transition-all hover:bg-gold-light"
+              className="inline-flex items-center justify-center px-8 py-4 bg-gold text-coffee-bean font-medium rounded-full btn-gold transition-all hover:bg-gold-light"
             >
               Get in Touch
             </a>

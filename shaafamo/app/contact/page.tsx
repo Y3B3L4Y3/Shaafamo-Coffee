@@ -119,10 +119,10 @@ export default function ContactPage() {
             {/* Contact Information */}
             <ScrollReveal variant="slideLeft">
               <div>
-                <span className="text-leaf-green font-medium tracking-widest uppercase text-sm">
+                <span className="text-leaf-olive font-medium tracking-widest uppercase text-sm">
                   Get in Touch
                 </span>
-                <h2 className="font-serif text-4xl md:text-5xl font-bold text-espresso mt-4 mb-6">
+                <h2 className="font-serif text-4xl md:text-5xl font-bold text-coffee-bean mt-4 mb-6">
                   We&apos;d Love to Hear From You
                 </h2>
                 <p className="text-text-muted text-lg leading-relaxed mb-8">
@@ -142,11 +142,11 @@ export default function ContactPage() {
                       transition={{ delay: index * 0.1 }}
                       className="flex items-start gap-4 p-4 bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow"
                     >
-                      <div className="w-12 h-12 rounded-full bg-leaf-green/10 flex items-center justify-center text-leaf-green flex-shrink-0">
+                      <div className="w-12 h-12 rounded-full bg-leaf-olive/10 flex items-center justify-center text-leaf-olive flex-shrink-0">
                         {info.icon}
                       </div>
                       <div>
-                        <h4 className="font-medium text-espresso mb-1">
+                        <h4 className="font-medium text-coffee-bean mb-1">
                           {info.title}
                         </h4>
                         {info.details.map((detail, detailIndex) =>
@@ -154,7 +154,7 @@ export default function ContactPage() {
                             <a
                               key={detailIndex}
                               href={info.link}
-                              className="block text-text-muted hover:text-leaf-green transition-colors"
+                              className="block text-text-muted hover:text-leaf-olive transition-colors"
                             >
                               {detail}
                             </a>
@@ -187,7 +187,7 @@ export default function ContactPage() {
                     ].map((item, index) => (
                       <li key={index} className="flex items-center gap-2">
                         <svg
-                          className="w-4 h-4 text-leaf-green"
+                          className="w-4 h-4 text-leaf-olive"
                           fill="none"
                           stroke="currentColor"
                           viewBox="0 0 24 24"
@@ -216,9 +216,9 @@ export default function ContactPage() {
                     animate={{ opacity: 1, scale: 1 }}
                     className="text-center py-12"
                   >
-                    <div className="w-16 h-16 rounded-full bg-leaf-green/10 flex items-center justify-center mx-auto mb-6">
+                    <div className="w-16 h-16 rounded-full bg-leaf-olive/10 flex items-center justify-center mx-auto mb-6">
                       <svg
-                        className="w-8 h-8 text-leaf-green"
+                        className="w-8 h-8 text-leaf-olive"
                         fill="none"
                         stroke="currentColor"
                         viewBox="0 0 24 24"
@@ -231,7 +231,7 @@ export default function ContactPage() {
                         />
                       </svg>
                     </div>
-                    <h3 className="font-serif text-2xl font-bold text-espresso mb-4">
+                    <h3 className="font-serif text-2xl font-bold text-coffee-bean mb-4">
                       Message Sent!
                     </h3>
                     <p className="text-text-muted mb-8">
@@ -256,7 +256,7 @@ export default function ContactPage() {
                   </motion.div>
                 ) : (
                   <>
-                    <h3 className="font-serif text-2xl font-bold text-espresso mb-6">
+                    <h3 className="font-serif text-2xl font-bold text-coffee-bean mb-6">
                       Send Us a Message
                     </h3>
                     <form onSubmit={handleSubmit} className="space-y-6">
@@ -264,7 +264,7 @@ export default function ContactPage() {
                         <div>
                           <label
                             htmlFor="name"
-                            className="block text-sm font-medium text-espresso mb-2"
+                            className="block text-sm font-medium text-coffee-bean mb-2"
                           >
                             Full Name *
                           </label>
@@ -275,14 +275,14 @@ export default function ContactPage() {
                             required
                             value={formData.name}
                             onChange={handleChange}
-                            className="w-full px-4 py-3 border border-cream-dark rounded-lg focus:outline-none focus:ring-2 focus:ring-leaf-green focus:border-transparent transition-all bg-cream/50"
+                            className="w-full px-4 py-3 border border-cream-dark rounded-lg focus:outline-none focus:ring-2 focus:ring-leaf-olive focus:border-transparent transition-all bg-cream/50"
                             placeholder="Your name"
                           />
                         </div>
                         <div>
                           <label
                             htmlFor="email"
-                            className="block text-sm font-medium text-espresso mb-2"
+                            className="block text-sm font-medium text-coffee-bean mb-2"
                           >
                             Email Address *
                           </label>
@@ -293,7 +293,7 @@ export default function ContactPage() {
                             required
                             value={formData.email}
                             onChange={handleChange}
-                            className="w-full px-4 py-3 border border-cream-dark rounded-lg focus:outline-none focus:ring-2 focus:ring-leaf-green focus:border-transparent transition-all bg-cream/50"
+                            className="w-full px-4 py-3 border border-cream-dark rounded-lg focus:outline-none focus:ring-2 focus:ring-leaf-olive focus:border-transparent transition-all bg-cream/50"
                             placeholder="your@email.com"
                           />
                         </div>
@@ -302,7 +302,7 @@ export default function ContactPage() {
                       <div>
                         <label
                           htmlFor="company"
-                          className="block text-sm font-medium text-espresso mb-2"
+                          className="block text-sm font-medium text-coffee-bean mb-2"
                         >
                           Company (Optional)
                         </label>
@@ -312,7 +312,7 @@ export default function ContactPage() {
                           name="company"
                           value={formData.company}
                           onChange={handleChange}
-                          className="w-full px-4 py-3 border border-cream-dark rounded-lg focus:outline-none focus:ring-2 focus:ring-leaf-green focus:border-transparent transition-all bg-cream/50"
+                          className="w-full px-4 py-3 border border-cream-dark rounded-lg focus:outline-none focus:ring-2 focus:ring-leaf-olive focus:border-transparent transition-all bg-cream/50"
                           placeholder="Your company name"
                         />
                       </div>
@@ -320,7 +320,7 @@ export default function ContactPage() {
                       <div>
                         <label
                           htmlFor="inquiryType"
-                          className="block text-sm font-medium text-espresso mb-2"
+                          className="block text-sm font-medium text-coffee-bean mb-2"
                         >
                           Inquiry Type *
                         </label>
@@ -330,7 +330,7 @@ export default function ContactPage() {
                           required
                           value={formData.inquiryType}
                           onChange={handleChange}
-                          className="w-full px-4 py-3 border border-cream-dark rounded-lg focus:outline-none focus:ring-2 focus:ring-leaf-green focus:border-transparent transition-all bg-cream/50 appearance-none"
+                          className="w-full px-4 py-3 border border-cream-dark rounded-lg focus:outline-none focus:ring-2 focus:ring-leaf-olive focus:border-transparent transition-all bg-cream/50 appearance-none"
                           style={{
                             backgroundImage: `url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='%236B6B6B'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M19 9l-7 7-7-7'%3E%3C/path%3E%3C/svg%3E")`,
                             backgroundRepeat: "no-repeat",
@@ -350,7 +350,7 @@ export default function ContactPage() {
                       <div>
                         <label
                           htmlFor="message"
-                          className="block text-sm font-medium text-espresso mb-2"
+                          className="block text-sm font-medium text-coffee-bean mb-2"
                         >
                           Your Message *
                         </label>
@@ -361,7 +361,7 @@ export default function ContactPage() {
                           rows={5}
                           value={formData.message}
                           onChange={handleChange}
-                          className="w-full px-4 py-3 border border-cream-dark rounded-lg focus:outline-none focus:ring-2 focus:ring-leaf-green focus:border-transparent transition-all bg-cream/50 resize-none"
+                          className="w-full px-4 py-3 border border-cream-dark rounded-lg focus:outline-none focus:ring-2 focus:ring-leaf-olive focus:border-transparent transition-all bg-cream/50 resize-none"
                           placeholder="Tell us how we can help..."
                         />
                       </div>
@@ -414,10 +414,10 @@ export default function ContactPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <ScrollReveal>
             <div className="text-center max-w-3xl mx-auto mb-12">
-              <span className="text-leaf-green font-medium tracking-widest uppercase text-sm">
+              <span className="text-leaf-olive font-medium tracking-widest uppercase text-sm">
                 Our Origin
               </span>
-              <h2 className="font-serif text-4xl md:text-5xl font-bold text-espresso mt-4 mb-6">
+              <h2 className="font-serif text-4xl md:text-5xl font-bold text-coffee-bean mt-4 mb-6">
                 Sidama, Ethiopia
               </h2>
               <p className="text-text-muted text-lg">
@@ -454,7 +454,7 @@ export default function ContactPage() {
                       />
                     </svg>
                   </div>
-                  <h3 className="font-serif text-2xl font-bold text-espresso mb-2">
+                  <h3 className="font-serif text-2xl font-bold text-coffee-bean mb-2">
                     Sidama Coffee Region
                   </h3>
                   <p className="text-text-muted">

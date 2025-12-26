@@ -109,7 +109,7 @@ export default function ProductsPage() {
             {features.map((feature, index) => (
               <StaggerItem key={index}>
                 <div className="flex items-center gap-3">
-                  <div className="text-leaf-green">{feature.icon}</div>
+                  <div className="text-leaf-olive">{feature.icon}</div>
                   <div>
                     <h4 className="font-medium text-sm">{feature.title}</h4>
                     <p className="text-cream/60 text-xs">{feature.description}</p>
@@ -126,10 +126,10 @@ export default function ProductsPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <ScrollReveal>
             <div className="text-center max-w-3xl mx-auto mb-16">
-              <span className="text-leaf-green font-medium tracking-widest uppercase text-sm">
+              <span className="text-leaf-olive font-medium tracking-widest uppercase text-sm">
                 Our Selection
               </span>
-              <h2 className="font-serif text-4xl md:text-5xl font-bold text-espresso mt-4 mb-6">
+              <h2 className="font-serif text-4xl md:text-5xl font-bold text-coffee-bean mt-4 mb-6">
                 Specialty Coffee Offerings
               </h2>
               <p className="text-text-muted text-lg">
@@ -162,10 +162,10 @@ export default function ProductsPage() {
 
                   {/* Content */}
                   <div className={index % 2 !== 0 ? "lg:order-1" : ""}>
-                    <span className="text-leaf-green font-medium tracking-wider uppercase text-sm">
+                    <span className="text-leaf-olive font-medium tracking-wider uppercase text-sm">
                       {product.subtitle}
                     </span>
-                    <h3 className="font-serif text-3xl md:text-4xl font-bold text-espresso mt-2 mb-4">
+                    <h3 className="font-serif text-3xl md:text-4xl font-bold text-coffee-bean mt-2 mb-4">
                       {product.name}
                     </h3>
                     <p className="text-text-muted text-lg leading-relaxed mb-6">
@@ -174,14 +174,14 @@ export default function ProductsPage() {
 
                     {/* Tasting Notes */}
                     <div className="mb-6">
-                      <h4 className="text-sm font-medium text-espresso mb-2">
+                      <h4 className="text-sm font-medium text-coffee-bean mb-2">
                         Tasting Notes
                       </h4>
                       <div className="flex flex-wrap gap-2">
                         {product.notes.map((note, noteIndex) => (
                           <span
                             key={noteIndex}
-                            className="px-3 py-1 bg-leaf-green/10 text-leaf-green rounded-full text-sm"
+                            className="px-3 py-1 bg-leaf-olive/10 text-leaf-olive rounded-full text-sm"
                           >
                             {note}
                           </span>
@@ -195,19 +195,19 @@ export default function ProductsPage() {
                         <p className="text-xs text-text-muted uppercase tracking-wider">
                           Process
                         </p>
-                        <p className="text-espresso font-medium">{product.process}</p>
+                        <p className="text-coffee-bean font-medium">{product.process}</p>
                       </div>
                       <div>
                         <p className="text-xs text-text-muted uppercase tracking-wider">
                           Altitude
                         </p>
-                        <p className="text-espresso font-medium">{product.altitude}</p>
+                        <p className="text-coffee-bean font-medium">{product.altitude}</p>
                       </div>
                       <div>
                         <p className="text-xs text-text-muted uppercase tracking-wider">
                           Variety
                         </p>
-                        <p className="text-espresso font-medium text-sm">
+                        <p className="text-coffee-bean font-medium text-sm">
                           {product.variety}
                         </p>
                       </div>
@@ -238,7 +238,7 @@ export default function ProductsPage() {
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <ScrollReveal variant="slideLeft">
               <div>
-                <span className="text-leaf-green font-medium tracking-widest uppercase text-sm">
+                <span className="text-leaf-olive font-medium tracking-widest uppercase text-sm">
                   For Roasters & Importers
                 </span>
                 <h2 className="font-serif text-4xl md:text-5xl font-bold mt-4 mb-6">
@@ -262,7 +262,7 @@ export default function ProductsPage() {
                   ].map((item, index) => (
                     <li key={index} className="flex items-center gap-3">
                       <svg
-                        className="w-5 h-5 text-leaf-green flex-shrink-0"
+                        className="w-5 h-5 text-leaf-olive flex-shrink-0"
                         fill="none"
                         stroke="currentColor"
                         viewBox="0 0 24 24"
@@ -304,7 +304,7 @@ export default function ProductsPage() {
       <section className="py-20 md:py-32 bg-cream">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <ScrollReveal>
-            <h2 className="font-serif text-4xl md:text-5xl font-bold text-espresso mb-6">
+            <h2 className="font-serif text-4xl md:text-5xl font-bold text-coffee-bean mb-6">
               Ready to Order?
             </h2>
             <p className="text-text-muted text-lg max-w-2xl mx-auto mb-10">

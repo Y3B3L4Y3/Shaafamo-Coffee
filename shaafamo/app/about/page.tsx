@@ -153,16 +153,16 @@ export default function AboutPage() {
                     className="object-cover"
                   />
                 </div>
-                <div className="absolute -bottom-8 -right-8 w-40 h-40 bg-leaf-green/10 rounded-2xl -z-10" />
+                <div className="absolute -bottom-8 -right-8 w-40 h-40 bg-coffee-bean/10 rounded-2xl -z-10" />
               </div>
             </ScrollReveal>
 
             <ScrollReveal variant="slideRight" delay={0.2}>
               <div>
-                <span className="text-leaf-green font-medium tracking-widest uppercase text-sm">
+                <span className="text-leaf-olive font-medium tracking-widest uppercase text-sm">
                   Who We Are
                 </span>
-                <h2 className="font-serif text-4xl md:text-5xl font-bold text-espresso mt-4 mb-6 leading-tight">
+                <h2 className="font-serif text-4xl md:text-5xl font-bold text-coffee-bean mt-4 mb-6 leading-tight">
                   A Family Legacy of Excellence
                 </h2>
                 <div className="space-y-4 text-text-muted text-lg leading-relaxed">
@@ -195,7 +195,7 @@ export default function AboutPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <ScrollReveal>
             <div className="text-center max-w-3xl mx-auto mb-16">
-              <span className="text-leaf-green font-medium tracking-widest uppercase text-sm">
+              <span className="text-leaf-olive font-medium tracking-widest uppercase text-sm">
                 Our Journey
               </span>
               <h2 className="font-serif text-4xl md:text-5xl font-bold mt-4">
@@ -206,7 +206,7 @@ export default function AboutPage() {
 
           <div className="relative">
             {/* Timeline Line */}
-            <div className="hidden md:block absolute left-1/2 top-0 bottom-0 w-px bg-leaf-green/30" />
+            <div className="hidden md:block absolute left-1/2 top-0 bottom-0 w-px bg-coffee-bean/30" />
 
             <StaggerContainer className="space-y-12 md:space-y-0">
               {timelineEvents.map((event, index) => (
@@ -219,7 +219,7 @@ export default function AboutPage() {
                     <div className="flex-1 md:text-right">
                       {index % 2 === 0 && (
                         <div className={`bg-espresso-light p-6 rounded-xl ${index % 2 === 0 ? "md:mr-8" : "md:ml-8"}`}>
-                          <span className="text-leaf-green font-serif text-xl font-semibold">
+                          <span className="text-leaf-olive font-serif text-xl font-semibold">
                             {event.year}
                           </span>
                           <h3 className="font-serif text-2xl font-bold mt-2 mb-3">
@@ -234,13 +234,13 @@ export default function AboutPage() {
 
                     {/* Center Dot */}
                     <div className="hidden md:flex items-center justify-center">
-                      <div className="w-4 h-4 rounded-full bg-leaf-green" />
+                      <div className="w-4 h-4 rounded-full bg-coffee-bean" />
                     </div>
 
                     <div className="flex-1">
                       {index % 2 !== 0 && (
                         <div className="bg-espresso-light p-6 rounded-xl md:ml-8">
-                          <span className="text-leaf-green font-serif text-xl font-semibold">
+                          <span className="text-leaf-olive font-serif text-xl font-semibold">
                             {event.year}
                           </span>
                           <h3 className="font-serif text-2xl font-bold mt-2 mb-3">
@@ -265,10 +265,10 @@ export default function AboutPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <ScrollReveal>
             <div className="text-center max-w-3xl mx-auto mb-16">
-              <span className="text-leaf-green font-medium tracking-widest uppercase text-sm">
+              <span className="text-leaf-olive font-medium tracking-widest uppercase text-sm">
                 What Drives Us
               </span>
-              <h2 className="font-serif text-4xl md:text-5xl font-bold text-espresso mt-4">
+              <h2 className="font-serif text-4xl md:text-5xl font-bold text-coffee-bean mt-4">
                 Our Values
               </h2>
             </div>
@@ -278,10 +278,10 @@ export default function AboutPage() {
             {values.map((value, index) => (
               <StaggerItem key={index}>
                 <div className="bg-white p-6 rounded-xl shadow-sm hover:shadow-lg transition-shadow duration-300 text-center group">
-                  <div className="w-16 h-16 rounded-full bg-leaf-green/10 flex items-center justify-center mx-auto mb-4 text-leaf-green group-hover:bg-leaf-green group-hover:text-white transition-colors duration-300">
+                  <div className="w-16 h-16 rounded-full bg-coffee-bean/10 flex items-center justify-center mx-auto mb-4 text-leaf-olive group-hover:bg-coffee-bean group-hover:text-white transition-colors duration-300">
                     {value.icon}
                   </div>
-                  <h3 className="font-serif text-xl font-semibold text-espresso mb-2">
+                  <h3 className="font-serif text-xl font-semibold text-coffee-bean mb-2">
                     {value.title}
                   </h3>
                   <p className="text-text-muted text-sm leading-relaxed">
@@ -299,10 +299,10 @@ export default function AboutPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <ScrollReveal>
             <div className="text-center max-w-3xl mx-auto mb-12">
-              <span className="text-leaf-green font-medium tracking-widest uppercase text-sm">
+              <span className="text-leaf-olive font-medium tracking-widest uppercase text-sm">
                 Visual Journey
               </span>
-              <h2 className="font-serif text-4xl md:text-5xl font-bold text-espresso mt-4 mb-6">
+              <h2 className="font-serif text-4xl md:text-5xl font-bold text-coffee-bean mt-4 mb-6">
                 Life at the Farm
               </h2>
               <p className="text-text-muted text-lg">
@@ -317,7 +317,7 @@ export default function AboutPage() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 md:py-32 bg-leaf-green text-white">
+      <section className="py-20 md:py-32 bg-coffee-bean text-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <ScrollReveal>
             <h2 className="font-serif text-4xl md:text-5xl font-bold mb-6">

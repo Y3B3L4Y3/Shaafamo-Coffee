@@ -9,7 +9,8 @@ import ParallaxLayer from "./ParallaxLayer";
 interface HeroProps {
   title?: string;
   subtitle?: string;
-  imageSrc: string;
+  imageSrc?: string;
+  videoSrc?: string;
   showCTA?: boolean;
   height?: "full" | "large" | "medium";
 }
@@ -18,6 +19,7 @@ export default function Hero({
   title = "Shaafamo Coffee",
   subtitle = "Premium specialty coffee from the highlands of Sidama, Ethiopia",
   imageSrc,
+  videoSrc = "/images/hero-video.mp4",
   showCTA = true,
   height = "full",
 }: HeroProps) {
@@ -29,7 +31,7 @@ export default function Hero({
 
   const y = useTransform(scrollYProgress, [0, 1], ["0%", "30%"]);
   const opacity = useTransform(scrollYProgress, [0, 0.5], [1, 0]);
-  const scale = useTransform(scrollYProgress, [0, 1], [1, 1.1]);
+  const scale = useTransform(scrollYProgress, [0, 1], [1, 1.05]);
 
   const heightClasses = {
     full: "h-screen min-h-[600px]",
@@ -37,24 +39,42 @@ export default function Hero({
     medium: "h-[70vh] min-h-[400px]",
   };
 
+  // Determine if we should show video or image
+  const showVideo = Boolean(videoSrc) && height === "full";
+
   return (
     <section
       ref={containerRef}
       className={`relative ${heightClasses[height]} overflow-hidden`}
     >
-      {/* Background Image with Ken Burns Effect */}
+      {/* Background - Video or Image */}
       <motion.div style={{ scale }} className="absolute inset-0">
-        <div className="absolute inset-0 animate-ken-burns">
-          <Image
-            src={imageSrc}
-            alt="Ethiopian coffee farm landscape"
-            fill
-            className="object-cover"
-            priority
-          />
-        </div>
+        {showVideo ? (
+          // Video Background
+          <video
+            autoPlay
+            muted
+            loop
+            playsInline
+            poster={imageSrc}
+            className="absolute inset-0 w-full h-full object-cover"
+          >
+            <source src={videoSrc} type="video/mp4" />
+          </video>
+        ) : (
+          // Image Background with Ken Burns Effect
+          <div className="absolute inset-0 animate-ken-burns">
+            <Image
+              src={imageSrc || "/images/farm-aerial-1.jpg"}
+              alt="Ethiopian coffee farm landscape"
+              fill
+              className="object-cover"
+              priority
+            />
+          </div>
+        )}
         {/* Gradient Overlay */}
-        <div className="absolute inset-0 gradient-overlay" />
+        <div className="absolute inset-0 bg-gradient-to-b from-black/30 via-black/40 to-black/70" />
       </motion.div>
 
       {/* Parallax Coffee Leaves */}
@@ -76,7 +96,7 @@ export default function Hero({
             initial={{ scaleX: 0 }}
             animate={{ scaleX: 1 }}
             transition={{ duration: 0.8, delay: 0.5 }}
-            className="w-16 h-0.5 bg-leaf-green mx-auto mb-6"
+            className="w-16 h-0.5 bg-[#9AAC52] mx-auto mb-6"
           />
 
           {/* Main Title */}
@@ -84,7 +104,7 @@ export default function Hero({
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, delay: 0.4 }}
-            className="font-serif text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-bold text-white mb-6 tracking-tight drop-shadow-2xl"
+            className="font-serif text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-bold text-white mb-6 tracking-tight drop-shadow-lg"
           >
             {title}
           </motion.h1>
@@ -94,7 +114,7 @@ export default function Hero({
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, delay: 0.6 }}
-            className="text-lg sm:text-xl md:text-2xl text-white/95 max-w-2xl mx-auto mb-10 font-light leading-relaxed drop-shadow-lg"
+            className="text-lg sm:text-xl md:text-2xl text-white/90 max-w-2xl mx-auto mb-10 font-light leading-relaxed drop-shadow-md"
           >
             {subtitle}
           </motion.p>
@@ -151,4 +171,3 @@ export default function Hero({
     </section>
   );
 }
-

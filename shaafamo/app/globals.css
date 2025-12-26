@@ -2,73 +2,93 @@
 
 :root {
   /* ========================================
-     SHAAFAMO COFFEE - PREMIUM BRAND PALETTE
-     Inspired by the farm logo: Bean Brown & Heritage Olive
+     SHAAFAMO COFFEE - BRAND COLOR SYSTEM
+     Derived from official logo colors
      ======================================== */
 
-  /* Primary - Coffee Bean Brown (Rich, Earthy, Premium) */
+  /* Primary - Coffee Bean Brown (from logo) */
   --coffee-bean: #5D2E1F;
   --coffee-bean-light: #7A4332;
   --coffee-bean-dark: #3D1E14;
+  --coffee-bean-muted: #8B5A4A;
   
-  /* Secondary - Heritage Olive (Agricultural, Natural) */
+  /* Secondary - Heritage Olive Green (from logo leaves) */
   --leaf-olive: #7B8B3D;
   --leaf-olive-light: #9AAC52;
   --leaf-olive-dark: #5C6A2E;
-  --leaf-sage: #8B9A4B;
+  --leaf-olive-muted: #8B9A4B;
   
-  /* Accent - Sun-Dried Cherry (Subtle pop of red) */
-  --cherry-red: #8B2635;
-  --cherry-dark: #5A1922;
-  
-  /* Gold Accent (For premium/luxury touches) */
+  /* Accent - Warm Gold (premium touch) */
   --gold: #B8956E;
   --gold-light: #D4B896;
   --gold-dark: #8B7355;
   
-  /* Warm Neutrals (Soft, organic, approachable) */
+  /* Warm Neutrals */
   --cream: #FDFBF7;
   --cream-warm: #F7F3ED;
   --cream-dark: #F0EBE3;
   --ivory: #FAF8F5;
   --sand: #E8E2D9;
+  --parchment: #F5F0E8;
   
-  /* Dark Backgrounds (Rich, sophisticated) */
+  /* Dark Tones */
   --espresso: #1E1614;
   --espresso-warm: #2A201C;
   --espresso-light: #3D322C;
   
-  /* Typography Scale */
+  /* Cherry Accent (subtle) */
+  --cherry-red: #8B3A3A;
+  --cherry-dark: #6B2D2D;
+  
+  /* Typography */
   --text-primary: #1E1614;
   --text-body: #3D322C;
   --text-muted: #6B5F58;
   --text-light: #9A8F88;
-  --text-inverse: #FDFBF7;
-
+  
   /* Overlays */
-  --overlay-dark: rgba(30, 22, 20, 0.75);
+  --overlay-dark: rgba(30, 22, 20, 0.8);
   --overlay-medium: rgba(30, 22, 20, 0.5);
   --overlay-light: rgba(30, 22, 20, 0.25);
 }
 
 @theme inline {
+  /* Coffee Browns */
   --color-coffee-bean: var(--coffee-bean);
   --color-coffee-bean-light: var(--coffee-bean-light);
+  --color-coffee-bean-dark: var(--coffee-bean-dark);
+  
+  /* Olive Greens */
   --color-leaf-olive: var(--leaf-olive);
   --color-leaf-olive-light: var(--leaf-olive-light);
-  --color-espresso: var(--espresso);
-  --color-espresso-warm: var(--espresso-warm);
+  --color-leaf-olive-dark: var(--leaf-olive-dark);
+  
+  /* Gold */
+  --color-gold: var(--gold);
+  --color-gold-light: var(--gold-light);
+  
+  /* Neutrals */
   --color-cream: var(--cream);
   --color-cream-dark: var(--cream-dark);
   --color-sand: var(--sand);
-  --color-cherry-red: var(--cherry-red);
-  --color-gold: var(--gold);
-  --color-gold-light: var(--gold-light);
+  --color-parchment: var(--parchment);
+  
+  /* Darks */
+  --color-espresso: var(--espresso);
+  --color-espresso-light: var(--espresso-light);
+  
+  /* Legacy compatibility */
+  --color-leaf-green: var(--leaf-olive);
+  --color-leaf-green-light: var(--leaf-olive-light);
+  --color-earth-brown: var(--coffee-bean);
+  --color-coffee-brown: var(--coffee-bean-light);
+  
+  /* Fonts */
   --font-serif: var(--font-playfair);
   --font-sans: var(--font-dm-sans);
 }
 
-/* Smooth Scrolling & Base Styles */
+/* Base Styles */
 html {
   scroll-behavior: smooth;
 }
@@ -91,15 +111,15 @@ body {
 }
 
 ::-webkit-scrollbar-thumb {
-  background: var(--leaf-olive);
+  background: var(--coffee-bean-muted);
   border-radius: 4px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: var(--leaf-olive-dark);
+  background: var(--coffee-bean);
 }
 
-/* Typography Utilities */
+/* Typography */
 .font-serif {
   font-family: var(--font-playfair), Georgia, serif;
 }
@@ -111,14 +131,20 @@ body {
 /* Text Selection */
 ::selection {
   background: var(--coffee-bean);
-  color: var(--white);
+  color: var(--cream);
 }
 
-/* Hero Ken Burns Animation */
+/* Ken Burns Animation */
 @keyframes kenBurns {
-  0% { transform: scale(1) translate(0, 0); }
-  50% { transform: scale(1.1) translate(-1%, -1%); }
-  100% { transform: scale(1) translate(0, 0); }
+  0% {
+    transform: scale(1) translate(0, 0);
+  }
+  50% {
+    transform: scale(1.08) translate(-0.5%, -0.5%);
+  }
+  100% {
+    transform: scale(1) translate(0, 0);
+  }
 }
 
 .animate-ken-burns {
@@ -129,9 +155,18 @@ body {
 .gradient-overlay {
   background: linear-gradient(
     to bottom,
-    rgba(30, 22, 20, 0.3) 0%,
-    rgba(30, 22, 20, 0.5) 50%,
+    rgba(30, 22, 20, 0.2) 0%,
+    rgba(30, 22, 20, 0.45) 50%,
     rgba(30, 22, 20, 0.75) 100%
+  );
+}
+
+.gradient-overlay-dark {
+  background: linear-gradient(
+    to bottom,
+    rgba(30, 22, 20, 0.4) 0%,
+    rgba(30, 22, 20, 0.6) 50%,
+    rgba(30, 22, 20, 0.85) 100%
   );
 }
 
@@ -142,18 +177,37 @@ body {
   background: rgba(255, 255, 255, 0.08);
 }
 
-/* Button Glow Effect */
+/* Button Styles */
 .btn-glow {
-  box-shadow: 0 4px 14px 0 rgba(93, 46, 31, 0.2);
+  box-shadow: 0 4px 14px 0 rgba(93, 46, 31, 0.25);
   transition: all 0.3s ease;
 }
 
 .btn-glow:hover {
-  box-shadow: 0 6px 20px 0 rgba(93, 46, 31, 0.3);
+  box-shadow: 0 6px 20px 0 rgba(93, 46, 31, 0.35);
   transform: translateY(-1px);
 }
 
-/* Image Mask Reveal */
+.btn-olive {
+  box-shadow: 0 4px 14px 0 rgba(123, 139, 61, 0.25);
+  transition: all 0.3s ease;
+}
+
+.btn-olive:hover {
+  box-shadow: 0 6px 20px 0 rgba(123, 139, 61, 0.35);
+  transform: translateY(-1px);
+}
+
+.btn-gold {
+  background: linear-gradient(135deg, var(--gold) 0%, var(--gold-dark) 100%);
+  box-shadow: 0 4px 14px 0 rgba(184, 149, 110, 0.3);
+}
+
+.btn-gold:hover {
+  box-shadow: 0 6px 20px 0 rgba(184, 149, 110, 0.4);
+}
+
+/* Mask Reveal */
 .mask-reveal {
   clip-path: inset(0 100% 0 0);
 }
@@ -163,18 +217,37 @@ body {
   transition: clip-path 0.8s cubic-bezier(0.65, 0, 0.35, 1);
 }
 
-/* Coffee Leaf Float Animation */
+/* Parallax */
+.parallax-container {
+  perspective: 1000px;
+  transform-style: preserve-3d;
+}
+
+/* Leaf Float Animation */
 @keyframes leafFloat {
-  0%, 100% { transform: translateY(0) rotate(0deg); }
-  25% { transform: translateY(-10px) rotate(1.5deg); }
-  75% { transform: translateY(5px) rotate(-1.5deg); }
+  0%, 100% {
+    transform: translateY(0) rotate(0deg);
+  }
+  25% {
+    transform: translateY(-8px) rotate(1.5deg);
+  }
+  75% {
+    transform: translateY(4px) rotate(-1.5deg);
+  }
 }
 
 .animate-leaf-float {
   animation: leafFloat 8s ease-in-out infinite;
 }
 
-/* Professional Section Divider */
+/* Stagger Delays */
+.stagger-1 { animation-delay: 0.1s; }
+.stagger-2 { animation-delay: 0.2s; }
+.stagger-3 { animation-delay: 0.3s; }
+.stagger-4 { animation-delay: 0.4s; }
+.stagger-5 { animation-delay: 0.5s; }
+
+/* Section Dividers */
 .section-divider {
   width: 60px;
   height: 2px;
@@ -187,15 +260,30 @@ body {
   background: linear-gradient(90deg, var(--leaf-olive) 0%, var(--leaf-olive-light) 100%);
 }
 
+.section-divider-brown {
+  width: 60px;
+  height: 2px;
+  background: linear-gradient(90deg, var(--coffee-bean) 0%, var(--coffee-bean-light) 100%);
+}
+
 /* Card Hover */
 .card-elegant {
   transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
 }
 
 .card-elegant:hover {
-  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.08), 0 10px 10px -5px rgba(0, 0, 0, 0.02);
   transform: translateY(-4px);
+}
+
+/* Image Zoom */
+.img-zoom {
+  transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.img-zoom:hover {
+  transform: scale(1.05);
 }
 
 /* Text Gradients */
@@ -203,10 +291,25 @@ body {
   background: linear-gradient(135deg, var(--coffee-bean) 0%, var(--coffee-bean-light) 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  background-clip: text;
 }
 
 .text-gradient-olive {
   background: linear-gradient(135deg, var(--leaf-olive) 0%, var(--leaf-olive-light) 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Border Accent */
+.border-accent {
+  border-color: var(--gold);
+}
+
+.border-olive {
+  border-color: var(--leaf-olive);
+}
+
+.border-brown {
+  border-color: var(--coffee-bean);
 }

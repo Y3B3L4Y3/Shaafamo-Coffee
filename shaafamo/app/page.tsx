@@ -64,8 +64,9 @@ export default function Home() {
     <main className="min-h-screen bg-cream">
       <Navigation />
 
-      {/* Hero Section */}
+      {/* Hero Section with Video Background */}
       <Hero
+        videoSrc="/images/hero-video.mp4"
         imageSrc="/images/farm-aerial-1.jpg"
         title="Shaafamo Coffee"
         subtitle="Premium specialty coffee from the highlands of Sidama, Ethiopia. Hand-picked with care, sun-dried to perfection."
@@ -78,10 +79,11 @@ export default function Home() {
             {/* Text Content */}
             <ScrollReveal variant="slideLeft">
               <div className="max-w-xl">
-                <span className="text-leaf-green font-medium tracking-widest uppercase text-sm">
+                <div className="section-divider-olive mb-6" />
+                <span className="text-leaf-olive font-medium tracking-widest uppercase text-sm">
                   Our Heritage
                 </span>
-                <h2 className="font-serif text-4xl md:text-5xl lg:text-6xl font-bold text-espresso mt-4 mb-6 leading-tight">
+                <h2 className="font-serif text-4xl md:text-5xl lg:text-6xl font-bold text-coffee-bean mt-4 mb-6 leading-tight">
                   From the Heart of Ethiopia
                 </h2>
                 <p className="text-text-muted text-lg leading-relaxed mb-6">
@@ -112,9 +114,9 @@ export default function Home() {
                     className="object-cover"
                   />
                 </div>
-                {/* Decorative Element */}
-                <div className="absolute -bottom-6 -left-6 w-32 h-32 bg-leaf-green/10 rounded-2xl -z-10" />
-                <div className="absolute -top-6 -right-6 w-24 h-24 bg-cherry-red/10 rounded-full -z-10" />
+                {/* Decorative Elements */}
+                <div className="absolute -bottom-6 -left-6 w-32 h-32 bg-leaf-olive/10 rounded-2xl -z-10" />
+                <div className="absolute -top-6 -right-6 w-24 h-24 bg-coffee-bean/10 rounded-full -z-10" />
               </div>
             </ScrollReveal>
           </div>
@@ -136,7 +138,8 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <ScrollReveal>
             <div className="text-center max-w-3xl mx-auto mb-16">
-              <span className="text-leaf-green font-medium tracking-widest uppercase text-sm">
+              <div className="section-divider mx-auto mb-6" />
+              <span className="text-leaf-olive-light font-medium tracking-widest uppercase text-sm">
                 Farm to Cup
               </span>
               <h2 className="font-serif text-4xl md:text-5xl lg:text-6xl font-bold mt-4 mb-6">
@@ -161,7 +164,7 @@ export default function Home() {
                       className="object-cover group-hover:scale-105 transition-transform duration-500"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-espresso/60 to-transparent" />
-                    <span className="absolute bottom-4 left-4 font-serif text-5xl font-bold text-leaf-green/50">
+                    <span className="absolute bottom-4 left-4 font-serif text-5xl font-bold text-leaf-olive/50">
                       {step.number}
                     </span>
                   </div>
@@ -183,10 +186,11 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <ScrollReveal>
             <div className="text-center max-w-3xl mx-auto mb-12">
-              <span className="text-leaf-green font-medium tracking-widest uppercase text-sm">
+              <div className="section-divider-olive mx-auto mb-6" />
+              <span className="text-leaf-olive font-medium tracking-widest uppercase text-sm">
                 Our Farm
               </span>
-              <h2 className="font-serif text-4xl md:text-5xl font-bold text-espresso mt-4 mb-6">
+              <h2 className="font-serif text-4xl md:text-5xl font-bold text-coffee-bean mt-4 mb-6">
                 Life in Sidama
               </h2>
               <p className="text-text-muted text-lg">
@@ -201,7 +205,7 @@ export default function Home() {
       </section>
 
       {/* Stats Section */}
-      <section className="py-20 bg-leaf-green text-white">
+      <section className="py-20 bg-coffee-bean text-cream">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <StaggerContainer className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
             {[
@@ -215,7 +219,7 @@ export default function Home() {
                   <span className="font-serif text-4xl md:text-5xl font-bold">
                     {stat.number}
                   </span>
-                  <p className="text-white/80 mt-2 text-sm uppercase tracking-wider">
+                  <p className="text-cream/70 mt-2 text-sm uppercase tracking-wider">
                     {stat.label}
                   </p>
                 </div>
@@ -229,9 +233,10 @@ export default function Home() {
       <section className="py-20 md:py-32 bg-cream relative overflow-hidden">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <ScrollReveal>
-            <h2 className="font-serif text-4xl md:text-5xl lg:text-6xl font-bold text-espresso mb-6">
+            <div className="section-divider-brown mx-auto mb-8" />
+            <h2 className="font-serif text-4xl md:text-5xl lg:text-6xl font-bold text-coffee-bean mb-6">
               Ready to Experience <br />
-              <span className="text-leaf-green">Exceptional Coffee?</span>
+              <span className="text-gradient-olive">Exceptional Coffee?</span>
             </h2>
             <p className="text-text-muted text-lg max-w-2xl mx-auto mb-10">
               Connect with us to learn more about our specialty coffee offerings,
@@ -241,7 +246,7 @@ export default function Home() {
               <AnimatedButton href="/contact" variant="primary" size="lg">
                 Get in Touch
               </AnimatedButton>
-              <AnimatedButton href="/products" variant="secondary" size="lg">
+              <AnimatedButton href="/products" variant="olive" size="lg">
                 View Products
               </AnimatedButton>
             </div>

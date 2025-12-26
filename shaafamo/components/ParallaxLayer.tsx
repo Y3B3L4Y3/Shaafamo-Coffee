@@ -43,7 +43,7 @@ export default function ParallaxLayer({ intensity = "medium" }: ParallaxLayerPro
       >
         <CoffeeLeafSVG
           variant="leaf1"
-          className="w-32 sm:w-40 md:w-48 h-auto text-leaf-green animate-leaf-float"
+          className="w-32 sm:w-40 md:w-48 h-auto text-leaf-olive animate-leaf-float"
         />
       </motion.div>
 
@@ -54,7 +54,7 @@ export default function ParallaxLayer({ intensity = "medium" }: ParallaxLayerPro
       >
         <CoffeeLeafSVG
           variant="leaf2"
-          className="w-28 sm:w-36 md:w-44 h-auto text-leaf-green-light animate-leaf-float stagger-2"
+          className="w-28 sm:w-36 md:w-44 h-auto text-leaf-olive-light animate-leaf-float stagger-2"
         />
       </motion.div>
 
@@ -76,7 +76,7 @@ export default function ParallaxLayer({ intensity = "medium" }: ParallaxLayerPro
       >
         <CoffeeLeafSVG
           variant="leaf3"
-          className="w-24 sm:w-32 md:w-40 h-auto text-leaf-green animate-leaf-float stagger-1"
+          className="w-24 sm:w-32 md:w-40 h-auto text-leaf-olive animate-leaf-float stagger-1"
         />
       </motion.div>
 
@@ -87,7 +87,7 @@ export default function ParallaxLayer({ intensity = "medium" }: ParallaxLayerPro
       >
         <CoffeeLeafSVG
           variant="leaf2"
-          className="w-36 sm:w-44 md:w-52 h-auto text-leaf-green-dark animate-leaf-float stagger-4"
+          className="w-36 sm:w-44 md:w-52 h-auto text-leaf-olive-dark animate-leaf-float stagger-4"
         />
       </motion.div>
 
@@ -109,7 +109,7 @@ export default function ParallaxLayer({ intensity = "medium" }: ParallaxLayerPro
       >
         <CoffeeLeafSVG
           variant="leaf1"
-          className="w-20 h-auto text-leaf-green animate-leaf-float stagger-2"
+          className="w-20 h-auto text-leaf-olive animate-leaf-float stagger-2"
         />
       </motion.div>
 
