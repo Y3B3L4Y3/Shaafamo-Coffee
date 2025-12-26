@@ -1,0 +1,212 @@
+@import "tailwindcss";
+
+:root {
+  /* ========================================
+     SHAAFAMO COFFEE - PREMIUM BRAND PALETTE
+     Inspired by the farm logo: Bean Brown & Heritage Olive
+     ======================================== */
+
+  /* Primary - Coffee Bean Brown (Rich, Earthy, Premium) */
+  --coffee-bean: #5D2E1F;
+  --coffee-bean-light: #7A4332;
+  --coffee-bean-dark: #3D1E14;
+  
+  /* Secondary - Heritage Olive (Agricultural, Natural) */
+  --leaf-olive: #7B8B3D;
+  --leaf-olive-light: #9AAC52;
+  --leaf-olive-dark: #5C6A2E;
+  --leaf-sage: #8B9A4B;
+  
+  /* Accent - Sun-Dried Cherry (Subtle pop of red) */
+  --cherry-red: #8B2635;
+  --cherry-dark: #5A1922;
+  
+  /* Gold Accent (For premium/luxury touches) */
+  --gold: #B8956E;
+  --gold-light: #D4B896;
+  --gold-dark: #8B7355;
+  
+  /* Warm Neutrals (Soft, organic, approachable) */
+  --cream: #FDFBF7;
+  --cream-warm: #F7F3ED;
+  --cream-dark: #F0EBE3;
+  --ivory: #FAF8F5;
+  --sand: #E8E2D9;
+  
+  /* Dark Backgrounds (Rich, sophisticated) */
+  --espresso: #1E1614;
+  --espresso-warm: #2A201C;
+  --espresso-light: #3D322C;
+  
+  /* Typography Scale */
+  --text-primary: #1E1614;
+  --text-body: #3D322C;
+  --text-muted: #6B5F58;
+  --text-light: #9A8F88;
+  --text-inverse: #FDFBF7;
+
+  /* Overlays */
+  --overlay-dark: rgba(30, 22, 20, 0.75);
+  --overlay-medium: rgba(30, 22, 20, 0.5);
+  --overlay-light: rgba(30, 22, 20, 0.25);
+}
+
+@theme inline {
+  --color-coffee-bean: var(--coffee-bean);
+  --color-coffee-bean-light: var(--coffee-bean-light);
+  --color-leaf-olive: var(--leaf-olive);
+  --color-leaf-olive-light: var(--leaf-olive-light);
+  --color-espresso: var(--espresso);
+  --color-espresso-warm: var(--espresso-warm);
+  --color-cream: var(--cream);
+  --color-cream-dark: var(--cream-dark);
+  --color-sand: var(--sand);
+  --color-cherry-red: var(--cherry-red);
+  --color-gold: var(--gold);
+  --color-gold-light: var(--gold-light);
+  --font-serif: var(--font-playfair);
+  --font-sans: var(--font-dm-sans);
+}
+
+/* Smooth Scrolling & Base Styles */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--cream);
+  color: var(--text-body);
+  font-family: var(--font-dm-sans), system-ui, sans-serif;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--cream-dark);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--leaf-olive);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--leaf-olive-dark);
+}
+
+/* Typography Utilities */
+.font-serif {
+  font-family: var(--font-playfair), Georgia, serif;
+}
+
+.font-sans {
+  font-family: var(--font-dm-sans), system-ui, sans-serif;
+}
+
+/* Text Selection */
+::selection {
+  background: var(--coffee-bean);
+  color: var(--white);
+}
+
+/* Hero Ken Burns Animation */
+@keyframes kenBurns {
+  0% { transform: scale(1) translate(0, 0); }
+  50% { transform: scale(1.1) translate(-1%, -1%); }
+  100% { transform: scale(1) translate(0, 0); }
+}
+
+.animate-ken-burns {
+  animation: kenBurns 25s ease-in-out infinite;
+}
+
+/* Gradient Overlays */
+.gradient-overlay {
+  background: linear-gradient(
+    to bottom,
+    rgba(30, 22, 20, 0.3) 0%,
+    rgba(30, 22, 20, 0.5) 50%,
+    rgba(30, 22, 20, 0.75) 100%
+  );
+}
+
+/* Glass Effect */
+.glass {
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  background: rgba(255, 255, 255, 0.08);
+}
+
+/* Button Glow Effect */
+.btn-glow {
+  box-shadow: 0 4px 14px 0 rgba(93, 46, 31, 0.2);
+  transition: all 0.3s ease;
+}
+
+.btn-glow:hover {
+  box-shadow: 0 6px 20px 0 rgba(93, 46, 31, 0.3);
+  transform: translateY(-1px);
+}
+
+/* Image Mask Reveal */
+.mask-reveal {
+  clip-path: inset(0 100% 0 0);
+}
+
+.mask-reveal.revealed {
+  clip-path: inset(0 0% 0 0);
+  transition: clip-path 0.8s cubic-bezier(0.65, 0, 0.35, 1);
+}
+
+/* Coffee Leaf Float Animation */
+@keyframes leafFloat {
+  0%, 100% { transform: translateY(0) rotate(0deg); }
+  25% { transform: translateY(-10px) rotate(1.5deg); }
+  75% { transform: translateY(5px) rotate(-1.5deg); }
+}
+
+.animate-leaf-float {
+  animation: leafFloat 8s ease-in-out infinite;
+}
+
+/* Professional Section Divider */
+.section-divider {
+  width: 60px;
+  height: 2px;
+  background: linear-gradient(90deg, var(--gold) 0%, var(--gold-light) 100%);
+}
+
+.section-divider-olive {
+  width: 60px;
+  height: 2px;
+  background: linear-gradient(90deg, var(--leaf-olive) 0%, var(--leaf-olive-light) 100%);
+}
+
+/* Card Hover */
+.card-elegant {
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+}
+
+.card-elegant:hover {
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+  transform: translateY(-4px);
+}
+
+/* Text Gradients */
+.text-gradient-brown {
+  background: linear-gradient(135deg, var(--coffee-bean) 0%, var(--coffee-bean-light) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.text-gradient-olive {
+  background: linear-gradient(135deg, var(--leaf-olive) 0%, var(--leaf-olive-light) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
