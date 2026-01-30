@@ -34,6 +34,12 @@ export const metadata: Metadata = {
       "Discover the finest specialty coffee from the highlands of Sidama, Ethiopia.",
     type: "website",
   },
+  icons: {
+    // Use the site's logo as the favicon and app icon. Replace with /favicon.ico if you add an .ico file later.
+    icon: "/images/logo.png",
+    shortcut: "/images/logo.png",
+    apple: "/images/logo.png",
+  },
 };
 
 export default function RootLayout({
