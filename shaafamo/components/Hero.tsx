@@ -17,6 +17,7 @@ interface HeroProps {
 
 export default function Hero({
   title = "Shaafamo Coffee",
+  subtitle,
   imageSrc,
   videoSrc = "/images/hero-video.mp4",
   showCTA = true,
@@ -79,8 +80,7 @@ export default function Hero({
             />
           </div>
         )}
-        {/* Gradient Overlay */}
-        <div className="absolute inset-0 bg-gradient-to-b from-black/30 via-black/40 to-black/70" />
+  {/* Gradient overlay removed so the video/background stays clean and transparent */}
       </motion.div>
 
       {/* Parallax Coffee Leaves */}
@@ -110,20 +110,22 @@ export default function Hero({
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, delay: 0.4 }}
-            className="font-serif text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-bold text-white mb-6 tracking-tight drop-shadow-lg"
+            className="font-serif text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-bold text-white/90 mb-6 tracking-tight drop-shadow-md bg-transparent"
           >
             {title}
           </motion.h1>
 
-          {/* Subtitle */}
-          <motion.p
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 1, delay: 0.6 }}
-            className="text-lg sm:text-xl md:text-2xl text-white/90 max-w-2xl mx-auto mb-10 font-light leading-relaxed drop-shadow-md"
-          >
-            {subtitle}
-          </motion.p>
+          {/* Subtitle (render only when provided) */}
+          {subtitle && (
+            <motion.p
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 1, delay: 0.6 }}
+              className="text-lg sm:text-xl md:text-2xl text-white/80 max-w-2xl mx-auto mb-10 font-light leading-relaxed drop-shadow-sm bg-transparent"
+            >
+              {subtitle}
+            </motion.p>
+          )}
 
           {/* CTA Buttons */}
           {showCTA && (

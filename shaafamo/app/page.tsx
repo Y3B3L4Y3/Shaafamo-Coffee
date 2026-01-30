@@ -69,7 +69,6 @@ export default function Home() {
   videoSrc="/images/hero-video.mp4"
   imageSrc="/images/farm-aerial-1.webp"
         title="Shaafamo Coffee"
-        subtitle="Premium specialty coffee from the highlands of Sidama, Ethiopia. Hand-picked with care, sun-dried to perfection."
       />
 
       {/* Introduction Section */}
