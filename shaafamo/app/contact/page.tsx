@@ -105,7 +105,7 @@ export default function ContactPage() {
 
       {/* Hero Section */}
       <Hero
-        imageSrc="/images/farm-aerial-2.jpg"
+        imageSrc="/images/farm-aerial-2.webp"
         title="Contact Us"
         subtitle="Let's start a conversation about exceptional Ethiopian coffee"
         showCTA={false}

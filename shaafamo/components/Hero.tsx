@@ -17,7 +17,6 @@ interface HeroProps {
 
 export default function Hero({
   title = "Shaafamo Coffee",
-  subtitle = "Premium specialty coffee from the highlands of Sidama, Ethiopia",
   imageSrc,
   videoSrc = "/images/hero-video.mp4",
   showCTA = true,
@@ -42,6 +41,12 @@ export default function Hero({
   // Determine if we should show video or image
   const showVideo = Boolean(videoSrc) && height === "full";
 
+  // Derive a .webm equivalent when possible (safe fallback)
+  const webmSrc =
+    typeof videoSrc === "string" && videoSrc.endsWith(".mp4")
+      ? videoSrc.replace(/\.mp4$/i, ".webm")
+      : undefined;
+
   return (
     <section
       ref={containerRef}
@@ -50,7 +55,7 @@ export default function Hero({
       {/* Background - Video or Image */}
       <motion.div style={{ scale }} className="absolute inset-0">
         {showVideo ? (
-          // Video Background
+          // Video Background — prefer WebM then MP4 fallback
           <video
             autoPlay
             muted
@@ -59,13 +64,14 @@ export default function Hero({
             poster={imageSrc}
             className="absolute inset-0 w-full h-full object-cover"
           >
+            {webmSrc && <source src={webmSrc} type="video/webm" />}
             <source src={videoSrc} type="video/mp4" />
           </video>
         ) : (
           // Image Background with Ken Burns Effect
           <div className="absolute inset-0 animate-ken-burns">
             <Image
-              src={imageSrc || "/images/farm-aerial-1.jpg"}
+              src={imageSrc || "/images/farm-aerial-1.webp"}
               alt="Ethiopian coffee farm landscape"
               fill
               className="object-cover"

@@ -9,27 +9,27 @@ import Image from "next/image";
 
 const featuredImages = [
   {
-    src: "/images/cherries-drying-1.jpg",
+    src: "/images/cherries-drying-1.webp",
     alt: "Red coffee cherries drying in the sun",
     caption: "Sun-dried cherries at our Sidama farm",
   },
   {
-    src: "/images/farm-aerial-1.jpg",
+    src: "/images/farm-aerial-1.webp",
     alt: "Aerial view of coffee drying beds",
     caption: "Our traditional raised drying beds",
   },
   {
-    src: "/images/farmer-basket.jpg",
+    src: "/images/farmer-basket.webp",
     alt: "Farmer with basket of fresh cherries",
     caption: "Hand-picked with generations of expertise",
   },
   {
-    src: "/images/workers-sorting.jpg",
+    src: "/images/workers-sorting.webp",
     alt: "Workers sorting dried coffee",
     caption: "Quality control at every step",
   },
   {
-    src: "/images/parchment-drying.jpg",
+    src: "/images/parchment-drying.webp",
     alt: "Parchment coffee drying",
     caption: "Natural sun-drying process",
   },
@@ -41,21 +41,21 @@ const processSteps = [
     title: "Hand-Picked",
     description:
       "Only the ripest cherries are selected by our experienced farmers, ensuring exceptional quality from the start.",
-    image: "/images/farmer-basket.jpg",
+  image: "/images/farmer-basket.webp",
   },
   {
     number: "02",
     title: "Sun-Dried",
     description:
       "Cherries are spread on raised African beds, dried slowly under the Sidama sun for 15-20 days.",
-    image: "/images/cherries-drying-2.jpg",
+  image: "/images/cherries-drying-2.webp",
   },
   {
     number: "03",
     title: "Carefully Processed",
     description:
       "Each batch is monitored and turned by hand to ensure even drying and perfect fermentation.",
-    image: "/images/workers-sorting.jpg",
+  image: "/images/workers-sorting.webp",
   },
 ];
 
@@ -66,8 +66,8 @@ export default function Home() {
 
       {/* Hero Section with Video Background */}
       <Hero
-        videoSrc="/images/hero-video.mp4"
-        imageSrc="/images/farm-aerial-1.jpg"
+  videoSrc="/images/hero-video.mp4"
+  imageSrc="/images/farm-aerial-1.webp"
         title="Shaafamo Coffee"
         subtitle="Premium specialty coffee from the highlands of Sidama, Ethiopia. Hand-picked with care, sun-dried to perfection."
       />
@@ -108,7 +108,7 @@ export default function Home() {
               <div className="relative">
                 <div className="relative aspect-[4/5] rounded-2xl overflow-hidden shadow-2xl">
         <Image
-                    src="/images/cherries-closeup.jpg"
+          src="/images/cherries-closeup.webp"
                     alt="Close-up of red coffee cherries"
                     fill
                     className="object-cover"

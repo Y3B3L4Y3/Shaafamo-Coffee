@@ -18,7 +18,7 @@ const products = [
     subtitle: "Sun-Dried Whole Cherry",
     description:
       "Our signature natural process coffee. Cherries are dried whole on raised beds for 15-20 days, developing intense fruity sweetness with notes of blueberry, strawberry, and dark chocolate.",
-    image: "/images/cherries-drying-1.jpg",
+  image: "/images/cherries-drying-1.webp",
     notes: ["Blueberry", "Strawberry", "Dark Chocolate", "Wine"],
     process: "Natural / Dry",
     altitude: "1,800 - 2,000m",
@@ -29,7 +29,7 @@ const products = [
     subtitle: "Clean & Bright",
     description:
       "Cherries are depulped and fermented before washing, creating a clean cup with bright acidity. Expect citrus notes, floral aromas, and a tea-like body.",
-    image: "/images/parchment-drying.jpg",
+  image: "/images/parchment-drying.webp",
     notes: ["Citrus", "Jasmine", "Bergamot", "Honey"],
     process: "Washed",
     altitude: "1,800 - 2,000m",
@@ -40,7 +40,7 @@ const products = [
     subtitle: "Sweet & Complex",
     description:
       "A hybrid method where some mucilage remains on the bean during drying. The result is a complex cup balancing the fruit of natural with the clarity of washed.",
-    image: "/images/cherries-drying-2.jpg",
+  image: "/images/cherries-drying-2.webp",
     notes: ["Peach", "Brown Sugar", "Caramel", "Nuts"],
     process: "Honey",
     altitude: "1,800 - 2,000m",
@@ -95,7 +95,7 @@ export default function ProductsPage() {
 
       {/* Hero Section */}
       <Hero
-        imageSrc="/images/cherries-closeup.jpg"
+        imageSrc="/images/cherries-closeup.webp"
         title="Our Coffee"
         subtitle="Specialty grade Ethiopian coffee, crafted with generations of expertise"
         showCTA={false}
@@ -228,7 +228,7 @@ export default function ProductsPage() {
       <section className="py-20 md:py-32 bg-espresso text-cream relative overflow-hidden">
         <div className="absolute inset-0 opacity-10">
           <Image
-            src="/images/farm-aerial-1.jpg"
+            src="/images/farm-aerial-1.webp"
             alt="Farm background"
             fill
             className="object-cover"
@@ -288,7 +288,7 @@ export default function ProductsPage() {
               <div className="relative">
                 <div className="aspect-[4/5] rounded-2xl overflow-hidden shadow-2xl">
                   <Image
-                    src="/images/workers-sorting.jpg"
+                    src="/images/workers-sorting.webp"
                     alt="Quality control process"
                     fill
                     className="object-cover"

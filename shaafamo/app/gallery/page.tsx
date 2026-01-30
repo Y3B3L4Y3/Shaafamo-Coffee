@@ -12,18 +12,18 @@ export const metadata = {
 };
 
 const heroImages = [
-  {
-    src: "/images/farm-aerial-1.jpg",
+    {
+      src: "/images/farm-aerial-1.webp",
     alt: "Aerial view of Shaafamo coffee farm",
     caption: "Our washing station in Sidama",
   },
-  {
-    src: "/images/cherries-closeup.jpg",
+    {
+      src: "/images/cherries-closeup.webp",
     alt: "Close-up of ripe coffee cherries",
     caption: "Ripe cherries ready for harvest",
   },
-  {
-    src: "/images/farm-aerial-2.jpg",
+    {
+      src: "/images/farm-aerial-2.webp",
     alt: "Panoramic view of the Ethiopian highlands",
     caption: "The lush Sidama landscape",
   },
@@ -35,17 +35,17 @@ const galleryCategories = [
     description: "Hand-picked at peak ripeness",
     images: [
       {
-        src: "/images/farmer-basket.jpg",
+          src: "/images/farmer-basket.webp",
         alt: "Farmer with freshly picked cherries",
         caption: "Hand-picked with care",
       },
       {
-        src: "/images/cherries-closeup.jpg",
+          src: "/images/cherries-closeup.webp",
         alt: "Vibrant red coffee cherries",
         caption: "Peak ripeness",
       },
       {
-        src: "/images/cherries-drying-1.jpg",
+          src: "/images/cherries-drying-1.webp",
         alt: "Cherries spread for drying",
         caption: "Natural process begins",
       },
@@ -56,17 +56,17 @@ const galleryCategories = [
     description: "Traditional sun-drying on raised beds",
     images: [
       {
-        src: "/images/cherries-drying-2.jpg",
+          src: "/images/cherries-drying-2.webp",
         alt: "Cherries drying under Ethiopian sun",
         caption: "15-20 days of careful drying",
       },
       {
-        src: "/images/workers-sorting.jpg",
+          src: "/images/workers-sorting.webp",
         alt: "Workers inspecting coffee quality",
         caption: "Quality at every step",
       },
       {
-        src: "/images/parchment-drying.jpg",
+          src: "/images/parchment-drying.webp",
         alt: "Washed parchment coffee drying",
         caption: "Washed process parchment",
       },
@@ -77,17 +77,17 @@ const galleryCategories = [
     description: "Nestled in the Sidama highlands",
     images: [
       {
-        src: "/images/farm-aerial-1.jpg",
+          src: "/images/farm-aerial-1.webp",
         alt: "Aerial view of the washing station",
         caption: "Our processing facility",
       },
       {
-        src: "/images/farm-aerial-2.jpg",
+          src: "/images/farm-aerial-2.webp",
         alt: "The surrounding Ethiopian forest",
         caption: "1,800m altitude",
       },
       {
-        src: "/images/drying-beds-wide.jpg",
+          src: "/images/drying-beds-wide.webp",
         alt: "Rows of raised drying beds",
         caption: "Traditional raised beds",
       },
@@ -96,16 +96,16 @@ const galleryCategories = [
 ];
 
 const allGalleryImages = [
-  { src: "/images/cherries-closeup.jpg", alt: "Coffee cherries close-up", caption: "Ripe red cherries" },
-  { src: "/images/farmer-basket.jpg", alt: "Farmer with harvest", caption: "Hand-picked perfection" },
-  { src: "/images/cherries-drying-1.jpg", alt: "Cherries drying", caption: "Natural sun-drying", span: "tall" as const },
-  { src: "/images/farm-aerial-1.jpg", alt: "Farm aerial view", caption: "Our Sidama farm", span: "wide" as const },
-  { src: "/images/workers-sorting.jpg", alt: "Quality inspection", caption: "Expert quality control", span: "wide" as const },
-  { src: "/images/cherries-drying-2.jpg", alt: "Drying process", caption: "Traditional methods" },
-  { src: "/images/parchment-drying.jpg", alt: "Parchment coffee", caption: "Washed process" },
-  { src: "/images/farm-aerial-2.jpg", alt: "Ethiopian highlands", caption: "Sidama landscape", span: "wide" as const },
-  { src: "/images/parchment-closeup.jpg", alt: "Dried parchment detail", caption: "Ready for export" },
-  { src: "/images/drying-beds-wide.jpg", alt: "Drying beds panorama", caption: "Raised African beds", span: "tall" as const },
+   { src: "/images/cherries-closeup.webp", alt: "Coffee cherries close-up", caption: "Ripe red cherries" },
+   { src: "/images/farmer-basket.webp", alt: "Farmer with harvest", caption: "Hand-picked perfection" },
+   { src: "/images/cherries-drying-1.webp", alt: "Cherries drying", caption: "Natural sun-drying", span: "tall" as const },
+   { src: "/images/farm-aerial-1.webp", alt: "Farm aerial view", caption: "Our Sidama farm", span: "wide" as const },
+   { src: "/images/workers-sorting.webp", alt: "Quality inspection", caption: "Expert quality control", span: "wide" as const },
+   { src: "/images/cherries-drying-2.webp", alt: "Drying process", caption: "Traditional methods" },
+   { src: "/images/parchment-drying.webp", alt: "Parchment coffee", caption: "Washed process" },
+   { src: "/images/farm-aerial-2.webp", alt: "Ethiopian highlands", caption: "Sidama landscape", span: "wide" as const },
+   { src: "/images/parchment-closeup.webp", alt: "Dried parchment detail", caption: "Ready for export" },
+   { src: "/images/drying-beds-wide.webp", alt: "Drying beds panorama", caption: "Raised African beds", span: "tall" as const },
 ];
 
 export default function GalleryPage() {
@@ -116,8 +116,8 @@ export default function GalleryPage() {
       {/* Hero Section */}
       <section className="relative h-[60vh] min-h-[400px] overflow-hidden">
         <div className="absolute inset-0">
-          <Image
-            src="/images/farm-aerial-2.jpg"
+            <Image
+              src="/images/farm-aerial-2.webp"
             alt="Ethiopian coffee landscape"
             fill
             className="object-cover animate-ken-burns"

@@ -42,45 +42,45 @@ const timelineEvents = [
 
 const galleryImages = [
   {
-    src: "/images/cherries-drying-1.jpg",
+    src: "/images/cherries-drying-1.webp",
     alt: "Red coffee cherries drying on raised beds",
     caption: "Natural sun-drying on raised African beds",
   },
   {
-    src: "/images/farm-aerial-1.jpg",
+    src: "/images/farm-aerial-1.webp",
     alt: "Aerial view of the coffee farm",
     caption: "Our washing station surrounded by forest",
     span: "wide" as const,
   },
   {
-    src: "/images/farmer-basket.jpg",
+    src: "/images/farmer-basket.webp",
     alt: "Farmer holding basket of cherries",
     caption: "Hand-picked at peak ripeness",
   },
   {
-    src: "/images/cherries-drying-2.jpg",
+    src: "/images/cherries-drying-2.webp",
     alt: "Coffee cherries drying in sunlight",
     caption: "15-20 days of careful drying",
   },
   {
-    src: "/images/workers-sorting.jpg",
+    src: "/images/workers-sorting.webp",
     alt: "Workers inspecting dried coffee",
     caption: "Quality inspection at every stage",
     span: "wide" as const,
   },
   {
-    src: "/images/parchment-drying.jpg",
+    src: "/images/parchment-drying.webp",
     alt: "Parchment coffee on drying beds",
     caption: "Washed process parchment drying",
   },
   {
-    src: "/images/farm-aerial-2.jpg",
+    src: "/images/farm-aerial-2.webp",
     alt: "Panoramic view of the farm",
     caption: "The beauty of Sidama",
     span: "wide" as const,
   },
   {
-    src: "/images/cherries-closeup.jpg",
+    src: "/images/cherries-closeup.webp",
     alt: "Close-up of coffee cherries",
     caption: "Ripe red cherries ready for picking",
   },
@@ -132,7 +132,7 @@ export default function AboutPage() {
 
       {/* Hero Section */}
       <Hero
-        imageSrc="/images/farm-aerial-2.jpg"
+    imageSrc="/images/farm-aerial-2.webp"
         title="Our Story"
         subtitle="Three generations of coffee excellence from the highlands of Sidama, Ethiopia"
         showCTA={false}
@@ -147,7 +147,7 @@ export default function AboutPage() {
               <div className="relative">
                 <div className="aspect-square rounded-2xl overflow-hidden shadow-2xl">
                   <Image
-                    src="/images/workers-sorting.jpg"
+                    src="/images/workers-sorting.webp"
                     alt="Workers inspecting coffee quality"
                     fill
                     className="object-cover"
